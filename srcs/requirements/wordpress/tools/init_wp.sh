@@ -40,4 +40,8 @@ fi
 
 chown -R www-data:www-data "$WP_PATH"
 
+wp plugin install redis-cache --activate --allow-root --path=/var/www/html
+wp config set WP_REDIS_HOST redis --allow-root --path=/var/www/html
+wp redis enable --allow-root --path=/var/www/html
+
 exec php-fpm8.2 -F

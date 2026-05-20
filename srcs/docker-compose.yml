@@ -36,6 +36,56 @@ services:
       - inception_net
     restart: unless-stopped
 
+  redis:
+    build: ./requirements/redis
+    container_name: redis
+    networks:
+      - inception_net
+    restart: unless-stopped
+    expose:
+      - "6379"
+  
+  vsftpd:
+    build: ./requirements/vsftpd
+    container_name: vsftpd
+    env_file:
+      - ../.env
+    volumes:
+      - wordpress_files:/var/www/html
+    networks:
+      - inception_net
+    ports:
+      - "20-21:20-21"
+      - "30000-30009:30000-30009"
+    restart: unless-stopped
+
+  static-site:
+    build: ./requirements/static-site
+    container_name: static-site
+    ports:
+      - "8080:3000"
+    networks:
+      - inception_net
+    restart: unless-stopped
+
+  adminer:
+    build: ./requirements/adminer
+    container_name: adminer
+    networks:
+      - inception_net
+    ports:
+      - "8081:8080"
+    restart: unless-stopped
+
+  redis-commander:
+    build: ./requirements/redis-commander
+    container_name: redis-commander
+    networks:
+      - inception_net
+    ports:
+      - "8082:8081"
+    restart: unless-stopped
+
 volumes:
   wordpress_files:
     name: wordpress_files
