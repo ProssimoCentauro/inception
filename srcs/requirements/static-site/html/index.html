@@ -1,5 +1,177 @@
 <!DOCTYPE html>
-<html>
-<head><title>My Static Site</title></head>
-<body><h1>Welcome to my static site!</h1></body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProssimoCentauro · Developer Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Rik Portfolio</div>
+            <nav>
+                <a href="#work">work</a>
+                <a href="#about">about</a>
+                <a href="#tech">tech</a>
+                <a href="https://github.com/ProssimoCentauro" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i> github
+                </a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <h1>Hi, I'm <span class="accent">Riccardo 👋</span><br>system & software engineer</h1>
+                <p>Crafting low‑level systems, servers, and graphics engines — all from scratch.</p>
+                <div class="hero-links">
+                    <a href="#work" class="btn primary">see work</a>
+                    <a href="#contact" class="btn secondary">get in touch</a>
+                </div>
+            </section>
+
+            <section id="work" class="projects">
+                <h2>selected projects</h2>
+                <div class="project-grid">
+                    <!-- minishell -->
+                    <div class="project-card" data-repo="minishell">
+                        <div class="card-header">
+                            <i class="fas fa-terminal"></i>
+                            <h3>minishell</h3>
+                        </div>
+                        <p>A minimalist Unix shell with builtins, pipes, redirections and environment variables.</p>
+                        <div class="tech-stack">
+                            <span>C</span><span>Lexer</span><span>Unix API</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="status done">✓ completed</span>
+                            <a href="https://github.com/ProssimoCentauro/minishell" target="_blank" class="repo-link">repo →</a>
+                        </div>
+                    </div>
+                    
+                    <!-- miniRT -->
+                    <div class="project-card" data-repo="miniRT">
+                        <div class="card-header">
+                            <i class="fas fa-cubes"></i>
+                            <h3>miniRT</h3>
+                        </div>
+                        <p>Ray tracing engine from scratch – spheres, planes, cylinders, lights and shadows.</p>
+                        <div class="tech-stack">
+                            <span>C</span><span>Ray Tracing</span><span>Math</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="status done">✓ completed</span>
+                            <a href="https://github.com/ProssimoCentauro/miniRT" target="_blank" class="repo-link">repo →</a>
+                        </div>
+                    </div>
+
+                    <!-- fract-ol -->
+                    <div class="project-card" data-repo="fract-ol">
+                        <div class="card-header">
+                            <i class="fas fa-chaos-theory"></i>
+                            <h3>fract‑ol</h3>
+                        </div>
+                        <p>Interactive fractal explorer (Mandelbrot, Julia) with zoom and colour mapping.</p>
+                        <div class="tech-stack">
+                            <span>C</span><span>MiniLibX</span><span>Complex Numbers</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="status done">✓ completed</span>
+                            <a href="https://github.com/ProssimoCentauro/fract-ol" target="_blank" class="repo-link">repo →</a>
+                        </div>
+                    </div>
+
+                    <!-- webserv -->
+                    <div class="project-card" data-repo="webserv">
+                        <div class="card-header">
+                            <i class="fas fa-globe"></i>
+                            <h3>webserv</h3>
+                        </div>
+                        <p>Non‑blocking HTTP/1.1 server (C++98). Handles CGI, file upload, and custom config.</p>
+                        <div class="tech-stack">
+                            <span>C++98</span><span>Socket</span><span>HTTP</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="status done">✓ completed</span>
+                            <a href="https://github.com/ProssimoCentauro/webserv" target="_blank" class="repo-link">repo →</a>
+                        </div>
+                    </div>
+
+                    <!-- push_swap -->
+                    <div class="project-card" data-repo="push_swap">
+                        <div class="card-header">
+                            <i class="fas fa-arrows-spin"></i>
+                            <h3>push_swap</h3>
+                        </div>
+                        <p>Sorting algorithm using two stacks with a minimal set of operations.</p>
+                        <div class="tech-stack">
+                            <span>C</span><span>Algorithms</span><span>Optimisation</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="status done">✓ completed</span>
+                            <a href="https://github.com/ProssimoCentauro/push_swap" target="_blank" class="repo-link">repo →</a>
+                        </div>
+                    </div>
+
+                    <!-- get_next_line -->
+                    <div class="project-card" data-repo="get_next_line">
+                        <div class="card-header">
+                            <i class="fas fa-file-lines"></i>
+                            <h3>get_next_line</h3>
+                        </div>
+                        <p>Efficient function to read any file descriptor line by line – static variables deep dive.</p>
+                        <div class="tech-stack">
+                            <span>C</span><span>Static Variables</span><span>Buffers</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="status done">✓ completed</span>
+                            <a href="https://github.com/ProssimoCentauro/get_next_line" target="_blank" class="repo-link">repo →</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="about">
+                <h2>about me</h2>
+                <div class="about-content">
+                    <p>I’m a systems engineer and a 42 student, deeply passionate about low‑level programming, 
+                    networking, and graphics. I love building things from the ground up — from a tiny shell 
+                    to a ray tracer or a full HTTP server.</p>
+                    <p>When I’m not debugging segmentation faults, I enjoy exploring algorithm optimisation 
+                    and containerisation (Docker, orchestration). This very portfolio runs inside a Docker 
+                    container as part of my <strong>Inception</strong> project at 42.</p>
+                </div>
+            </section>
+
+            <section id="tech" class="tech">
+                <h2>tech stack & tools</h2>
+                <div class="tech-grid">
+                    <span>C</span><span>C++98</span><span>Shell</span><span>Docker</span>
+                    <span>Makefile</span><span>Git</span><span>Linux</span><span>GDB/Valgrind</span>
+                    <span>HTTP/TCP</span><span>Ray Tracing</span><span>MiniLibX</span>
+                </div>
+            </section>
+
+            <section id="contact" class="contact">
+                <h2>let's talk</h2>
+                <p>Interested in collaboration or just want to say hi? Drop me a message.</p>
+                <div class="contact-links">
+                    <a href="mailto:rtodaro@student.42roma.it" class="btn primary">
+                        <i class="fas fa-envelope"></i> rtodaro@student.42roma.it
+                    </a>
+                    <a href="https://github.com/ProssimoCentauro" target="_blank" class="btn secondary">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2026 ProssimoCentauro — built with <i class="fas fa-heart"></i> for the Inception project</p>
+        </footer>
+    </div>
+    <script src="js/main.js"></script>
+</body>
 </html>
